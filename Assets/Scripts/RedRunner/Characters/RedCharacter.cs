@@ -448,9 +448,9 @@ namespace RedRunner.Characters
 
 		public override void Jump ()
 		{
-			if ( !IsDead.Value )
+			if ( !IsDead.Value )  /// Nhân vật chỉ có thể nhảy khi chưa chết
 			{
-				if ( m_GroundCheck.IsGrounded )
+				if ( m_GroundCheck.IsGrounded ) // Nhân vật chỉ có thể nhảy khi đang đứng trên mặt đất
 				{
 					Vector2 velocity = m_Rigidbody2D.linearVelocity;
 					velocity.y = m_JumpStrength;
